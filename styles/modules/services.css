@@ -1,0 +1,11 @@
+.services {
+  display: inherit;
+  flex-direction: column;
+  width: 100%;
+}
+.services .services-cards {
+  width: 100%;
+  display: inherit;
+  flex-direction: row;
+}
+/*# sourceMappingURL=services.css.map */

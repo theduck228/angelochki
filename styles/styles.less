@@ -1,0 +1,97 @@
+//цвета
+@green_main_color:#60D6A7;
+@white_main_color: #FFFFFF;
+@yellow_main_color: #FFB61D;
+@test_secondary_green: rgba(96, 214, 167, 0.80);
+@footer_body_color: #007143;
+@footer_reserved_color: #003821;
+
+
+//тени
+@box-shadow_property: 0px 7px 4px 0px rgba(0, 0, 0, 0.25);
+
+
+//шрифты
+@font-light: 300;
+@font-normal: 400;
+@font-bold: 700;
+
+
+//Кнопки
+.btn_mix{
+  width: 248px;
+  //width: 150px;
+  height: 50px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: #FFB61D;
+  box-shadow: @box-shadow_property;
+  border: none;
+  text-align: center;
+  color: @white_main_color;
+  font-size: 20px;
+  transition: background-color 0.2s ease-in-out;
+}
+.btn_mix_hover {
+  background-color: #D59000;
+}
+
+
+
+
+
+*{
+  //margin: 0 auto;
+  font-family: 'Montserrat', sans-serif;
+}
+html,
+body{
+  height: 100%;
+  margin: 0;
+}
+.wrapper{
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+main{
+  display: inherit;
+  flex-direction: column;
+  align-items: center;
+  flex: 1 1 auto ;
+}
+h1{
+  font-weight: @font-bold;
+}
+button:not(.services__arrow){
+  .btn_mix
+}
+button:not(.services__arrow):hover{
+  .btn_mix_hover
+}
+input{
+  transition: border-color ease-in-out;
+}
+input::placeholder {
+  color: initial;
+}
+
+input:focus::placeholder {
+  color: transparent;
+}
+input:focus{
+  border: @yellow_main_color;
+}
+
+
+
+
+@import "modules/header";
+@import "modules/sign-up";
+@import "modules/advances";
+@import "modules/simptoms";
+@import "modules/portfolio";
+@import "modules/services";
+@import "modules/map";
+@import "modules/footer";

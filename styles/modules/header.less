@@ -1,0 +1,44 @@
+.wrapper-header{
+  width: 100vw;
+  color: @white_main_color;
+  display: flex;
+  background-color: @green_main_color;
+  height: 70px;
+  justify-content: space-around;
+  box-shadow: @box-shadow_property;
+  margin-bottom: 132px;
+  transform-origin: left;
+  transform: scale(0,1);
+  opacity: 0;
+  transition: transform 1s ease-out 0.2s, opacity 0.5s ease-out;
+  position: fixed;
+  z-index: 99;
+  & h1{
+    font-size: 30px;
+    margin: 0;
+    line-height: 70px;
+  }
+  & h1:nth-child(2){
+    font-size: 25px;
+  }
+  & .header__scroll-links{
+    display: inherit;
+    justify-content: space-between;
+    font-size: 20px;
+    margin: 0;
+    gap: 20px;
+    max-width: 250px;
+    min-width: 12%;
+    & .header__scroll-item{
+      font-size: 25px;
+      margin: 0;
+      line-height: 70px;
+      cursor: pointer;
+    }
+  }
+}
+.wrapper-header._active{
+  transform: scale(1,1);
+  opacity: 1;
+  transition: transform 1s ease-out 0.2s, opacity 0.5s ease-out;
+}

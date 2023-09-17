@@ -1,0 +1,113 @@
+.wrapper-footer{
+  background-color: #007143;
+  width:100vw;
+  display: flex;
+  flex-direction: column;
+  color: @white_main_color;
+  & .footer-body{
+    display: inherit;
+    height: 488px;
+    flex-direction: row;
+    justify-content: space-evenly;
+    & .column-socials{
+      margin-top: 70px;
+      display: inherit;
+      flex-direction: column;
+      & h1{
+        font-size: 30px;
+        margin-top: 0;
+      }
+      & h2{
+        font-size: 20px;
+        font-weight: @font-normal;
+        margin-bottom: 20px;
+      }
+      & .column-socials__links{
+        display: inherit;
+        justify-content: space-between;
+        width: 250px;
+        width: 250px;
+        & .item-inst{
+          background: url("../images/footer/instagram.svg") no-repeat;
+          width: 32px;
+          height: 32px;
+        }
+        & .item-tw{
+          background: url("../images/footer/twitter.svg") no-repeat;
+          width: 32px;
+          height: 32px;
+        }
+        & .item-fb{
+          background: url("../images/footer/facebook.svg") no-repeat;
+          width: 32px;
+          height: 32px;
+        }
+        & .item-yt{
+          background: url("../images/footer/youtube.svg") no-repeat;
+          width: 32px;
+          height: 32px;
+        }
+      }
+    }
+    & .column-contacts{
+      margin-top: 70px;
+      display: inherit;
+      flex-direction: column;
+      & h1{
+        line-height: 50px;
+        font-size: 20px;
+        margin-top: 0;
+      }
+      & ul{
+        font-size: 20px;
+        list-style-type: none;
+        list-style-position: outside;
+        margin: 0;
+        padding: 0;
+        text-wrap: none;
+        & .column-contacts__contacts-item{
+          margin-bottom: 20px;
+        }
+        & .contact-mail:before{
+          content: url("../images/footer/Icon Frame.svg");
+          position: relative;
+          top: 4px;
+          margin-right: 10px;
+        }
+        & .contact-phone:before{
+          content: url("../images/footer/footer_phone.svg");
+          position: relative;
+          top: 5px;
+          margin-right: 10px;
+        }
+      }
+      & .column-contacts__subtitle{
+        margin: 0;
+        color: #8e8e8e;
+        font-size: 16px;
+      }
+      & .column-contacts__subtitle:before{
+        content: '';
+        position: relative;
+        top: 5px;
+        margin-right: 35px;
+      }
+    }
+    & .filler-pic{
+      & img{
+        margin-top: 20px;
+        width:100%;
+      }
+    }
+  }
+  & .footer-rights-reserved{
+    background-color: #003821;
+    text-align: center;
+    font-size: 18px;
+    height: 50px;
+    & p{
+      margin: 0;
+      line-height: 50px;
+    }
+  }
+}

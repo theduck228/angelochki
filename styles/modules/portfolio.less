@@ -1,0 +1,85 @@
+.portfolio{
+  width: 100%;
+  display: inherit;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 290px;
+  & .portfolio-header{
+    font-size: 65px;
+    font-weight: @font-bold;
+    margin-bottom: 150px;
+    transition: transform 0.5s ease-out;
+    transform: scale(0);
+  }
+  & .portfolio-header._active{
+    transform: scale(1);
+    transition: transform 0.5s ease-out;
+  }
+  & .portfolio-container{
+    display: inherit;
+    width: 100%;
+    justify-content: space-evenly;
+    & .portfolio-description{
+      display: inherit;
+      flex-direction: column;
+      width: 800px;
+      & .portfolio__avatar{
+        display: inherit;
+        flex-direction: row;
+        justify-content: flex-start;
+        margin-bottom: 70px;
+        & .portfolio__avatar-pic{
+          margin-right: 50px;
+          opacity: 0;
+          transform: translate(-50%,0);
+          transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+        }
+        & .portfolio__avatar-pic._active{
+          transform: translate(0,0);
+          opacity: 1;
+          transition: transform 1s ease-out 0.2s, opacity 1s ease-out 0.2s;
+        }
+        & .portfolio__id {
+          display: inherit;
+          flex-direction: column;
+          justify-content: center;
+          align-content: center;
+          & h1 {
+            font-size: 50px;
+            font-weight: @font-bold;
+            margin-bottom: 0;
+          }
+
+          & p {
+            font-size: 30px;
+            font-weight: @font-light;
+            margin: 0;
+          }
+        }
+      }
+      & p {
+        font-size: 30px;
+        font-weight: @font-light;
+        margin: 0;
+        & span{
+          font-weight: @font-bold;
+          line-height: 130%;
+        }
+      }
+    }
+  }
+  & .portfolio__bg-pic{
+    width: 30%;
+    height: 30%;
+    align-self: center;
+    opacity: 0;
+    transform: translate(50%,0);
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+  }
+  & .portfolio__bg-pic._active{
+    transform: translate(0,0);
+    opacity: 1;
+    transition: transform 1s ease-out 0.2s, opacity 1s ease-out 0.2s;
+  }
+}

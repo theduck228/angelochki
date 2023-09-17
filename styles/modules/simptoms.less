@@ -1,0 +1,145 @@
+.symptoms{
+  display: inherit;
+  flex-direction: column;
+  width: 85%;
+  justify-content: space-evenly;
+  align-content: space-evenly;
+  margin-bottom: 290px;
+  & .symptoms-container{
+    display: inherit;
+    flex-direction: column;
+    & .symptoms__header{
+      display: inherit;
+      font-size: 45px;
+      font-weight: @font-bold;
+      width: 50%;
+      margin-bottom: 60px;
+      transform: translate(-125%, 0);
+      opacity: 1;
+      transition: transform 0.5s ease-in-out;
+    }
+    & .symptoms__header._active{
+      transform: translate(0, 0);
+      opacity: 1;
+      transition: transform 0.5s ease-in-out;
+    }
+    & .symptoms-list{
+      display: inherit;
+      justify-content: space-between;
+      margin-bottom: 70px;
+      & ul{
+        display: inherit;
+        flex-direction: column;
+        font-size: 18px;
+        font-weight: @font-bold;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        text-wrap: none;
+        & li{
+          display: inherit;
+          align-items: center;
+          height: 100px;
+          width: 600px;
+          background-color: @green_main_color;
+          color: @white_main_color;
+          border-radius: 10px;
+          box-shadow: none;
+          margin-bottom: 30px;
+          text-wrap: normal;
+          transform: translate(-120%, 0);
+          opacity: 0;
+          transition: transform 0.5s ease-in-out 0.2s, opacity 0.5s ease-in-out 0.2s, box-shadow 0.5s ease-in-out 0.5s;
+        }
+        & li._active{
+          transform: translate(0, 0);
+          opacity: 1;
+          box-shadow: @box-shadow_property;
+          transition: transform 0.5s ease-in-out 0.2s, opacity 0.5s ease-in-out 0.2s, box-shadow 0.5s ease-in-out 0.5s;
+        }
+        & li:before{
+          content: url('../images/main/dashicons-warning.svg');
+          margin-left: 20px;
+          margin-right: 10px;
+        }
+
+      }
+      & .symptoms-pic{
+        margin: 0;
+        width: 40%;
+        height: 30%;
+        position: relative;
+        bottom: 100px;
+        min-width: 400px;
+        min-height: 300px;
+      }
+    }
+    & .diagnostic-application{
+      display: inherit;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-self: baseline;
+      width: 100%;
+      height: 265px;
+      text-wrap: none;
+      //margin-left: 7.3%;
+      border-radius: 10px;
+      border: 2px solid @green_main_color;
+      margin-bottom: 0;
+      transform: translate(0, 50%);
+      opacity: 0;
+      transition: transform 0.5s ease-in-out 0.2s, opacity 0.5s ease-in-out 0.2s;
+      & .application-description{
+        display: inherit;
+        flex-direction: column;
+        justify-content: center;
+        width: 40%;
+        & h1{
+          width: 80%;
+          font-size: 35px;
+          font-weight: @font-bold;
+          margin: 0;
+        }
+        & p{
+          width: 50%;
+          font-size: 20px;
+          margin: 10px 0 0 0 ;
+          font-weight: @font-light;
+        }
+      }
+      & .application__sign-up{
+        display: inherit;
+        flex-direction: column;
+        justify-content: center;
+        & .sign-up__form{
+          gap: 15px;
+          display: flex;
+          width: 50%;
+          & input{
+            height: 50px;
+            width: 310px;
+            min-width: 310px;
+            border-radius: 10px;
+            border: 2px solid @green_main_color;
+            font-size: 20px;
+            padding-left: 20px;
+            margin-bottom: 10px;
+          }
+          & input::placeholder{
+            font-size: 20px;
+          }
+        }
+        & label{
+          font-size: 20px;
+          font-weight: @font-bold;
+          color: @yellow_main_color;
+        }
+      }
+    }
+    & .diagnostic-application._active{
+      transform: translate(0, 0);
+      opacity: 1;
+      transition: transform 0.5s ease-in-out 0.2s, opacity 0.5s ease-in-out 0.2s;
+    }
+  }
+}
